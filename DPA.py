@@ -134,7 +134,7 @@ def attack( argc, argv ):
   for m in M:
     h = []
     for byte in m:
-      h.append([hweight(byte,firstSbox(byte,k) ) for k in K])
+      h.append([hweight(firstSbox(byte,k) ) for k in K])
     H.append(numpy.array(h))
   H = numpy.array(H)
   print("Dim H: {}, H[0] {}".format(H.shape,H[0]) )
